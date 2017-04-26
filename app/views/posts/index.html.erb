@@ -1,0 +1,18 @@
+<h1>All Posts</h1>
+
+<div class="col-md-6 col-md-offset-3">
+  <% @posts.each do |pos| %>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= pos.body %>
+      </div>
+      <div class="panel-footer">
+        <% if current_user %>
+          Posted by: <%= User.find_by(id: pos.user_id).username %>
+        <% else %>
+          Sign in to see the post`s author.
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
