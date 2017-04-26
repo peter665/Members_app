@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :logged_in?, exept: [:index]
 
   def new
-    @user = User.find_by(id: current_user.id)
+    
   end
 
   def create
