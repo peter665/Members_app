@@ -10,5 +10,5 @@
 </div>
 
 <div class="col-md-6 col-md-offset-5">
-  <%= link_to 'Make a New Post', posts_new_path, class: 'btn btn-primary btn-lg' %>
+  <%= link_to 'Make a New Post', posts_new_path, class: "btn btn-primary btn-lg #{'disabled' unless current_user}" %>
 </div>
